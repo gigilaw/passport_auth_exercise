@@ -74,6 +74,12 @@ app.post(
   function(req, res) {}
 );
 
+//Logout Routes
+app.get("/logout", function(req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
 app.listen(3000, () => {
   console.log("Server Started");
 });
